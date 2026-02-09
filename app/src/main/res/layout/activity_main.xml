@@ -3,13 +3,13 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@color/white">
+    android:background="@color/beige">
 
     <ImageView
         android:id="@+id/iv_header_logo"
         android:layout_width="150dp"
         android:layout_height="80dp"
-        android:src="@drawable/logo"
+        android:src="@drawable/luxx_haven_logo"
         android:layout_centerHorizontal="true"
         android:layout_marginTop="20dp"
         android:contentDescription="Luxx Haven Logo" />
