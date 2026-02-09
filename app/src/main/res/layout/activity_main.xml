@@ -3,13 +3,13 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@color/white">
+    android:background="@color/beige">
 
     <ImageView
         android:id="@+id/iv_header_logo"
         android:layout_width="150dp"
         android:layout_height="80dp"
-        android:src="@drawable/logo"
+        android:src="@drawable/luxx_haven_logo"
         android:layout_centerHorizontal="true"
         android:layout_marginTop="20dp"
         android:contentDescription="Luxx Haven Logo" />
@@ -45,14 +45,14 @@
                 android:textColor="@color/black"
                 android:layout_marginBottom="20dp"/>
 
-            <EditText
-                android:layout_width="match_parent"
-                android:layout_height="50dp"
-                android:background="@drawable/ic_launcher_background"
-                android:hint="Search location..."
-                android:paddingStart="15dp"
-                android:textColorHint="#888888"
-                android:layout_marginBottom="20dp"/>
+<!--            <EditText-->
+<!--                android:layout_width="match_parent"-->
+<!--                android:layout_height="50dp"-->
+<!--                android:background="@drawable/ic_launcher_background"-->
+<!--                android:hint="Search location..."-->
+<!--                android:paddingStart="15dp"-->
+<!--                android:textColorHint="#888888"-->
+<!--                android:layout_marginBottom="20dp"/>-->
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
@@ -71,8 +71,71 @@
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="House Image Here" />
+                    android:background="@drawable/unit1"
+                    />
+
+
             </LinearLayout>
+
+            <TextView
+                android:layout_height="wrap_content"
+                android:layout_width="wrap_content"
+                android:text="Unit 1"
+                android:layout_marginLeft="1in"
+                />
+
+
+            <LinearLayout
+                android:layout_marginTop="5mm"
+                android:layout_width="match_parent"
+                android:layout_height="200dp"
+                android:background="#E0E0E0"
+                android:gravity="center"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/unit1"
+                        />
+
+
+
+            </LinearLayout>
+
+            <TextView
+                android:layout_height="wrap_content"
+                android:layout_width="wrap_content"
+                android:text="Unit 1"
+                android:layout_marginLeft="1in"
+                />
+
+
+
+            <LinearLayout
+                android:layout_marginTop="5mm"
+                android:layout_width="match_parent"
+                android:layout_height="200dp"
+                android:background="#E0E0E0"
+                android:gravity="center"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/unit1"
+                    />
+
+
+
+            </LinearLayout>
+
+            <TextView
+                android:layout_height="wrap_content"
+                android:layout_width="wrap_content"
+                android:text="Unit 1"
+                android:layout_marginLeft="1in"
+                />
 
         </LinearLayout>
     </ScrollView>
