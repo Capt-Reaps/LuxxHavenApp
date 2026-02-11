@@ -8,4 +8,7 @@
     <color name="white">#FFFFFFFF</color>
     <color name="beige">#F5F5DC</color>
     <color name="orange">   #DFCEBF</color>
+    <color name="luxx_banner_beige">#F5F5DC</color> <!-- Replace with your specific beige hex -->
+    <color name="luxx_text_dark">#333333</color>    <!-- Replace with your specific dark hex -->
+    <color name="luxx_button_gray">#808080</color>  <!-- Replace with your specific gray hex -->
 </resources>
