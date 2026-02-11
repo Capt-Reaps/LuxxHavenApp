@@ -3,16 +3,7 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@color/white">
-
-    <ImageView
-        android:id="@+id/iv_header_logo"
-        android:layout_width="150dp"
-        android:layout_height="80dp"
-        android:src="@drawable/logo"
-        android:layout_centerHorizontal="true"
-        android:layout_marginTop="20dp"
-        android:contentDescription="Luxx Haven Logo" />
+    android:background="@color/beige">
 
     <com.google.android.material.bottomnavigation.BottomNavigationView
         android:id="@+id/bottom_navigation"
@@ -20,61 +11,180 @@
         android:layout_height="wrap_content"
         android:layout_alignParentBottom="true"
         android:background="@color/white"
+        app:elevation="8dp"
         app:labelVisibilityMode="labeled"
         app:menu="@menu/bottom_nav_menu" />
 
     <ScrollView
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:layout_below="@id/iv_header_logo"
         android:layout_above="@id/bottom_navigation"
         android:fillViewport="true">
 
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:orientation="vertical"
-            android:padding="20dp">
+            android:orientation="vertical">
 
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="Find your perfect\nstaycation."
-                android:textSize="28sp"
-                android:textStyle="bold"
-                android:textColor="@color/black"
-                android:layout_marginBottom="20dp"/>
-
-            <EditText
+            <FrameLayout
                 android:layout_width="match_parent"
-                android:layout_height="50dp"
-                android:background="@drawable/ic_launcher_background"
-                android:hint="Search location..."
-                android:paddingStart="15dp"
-                android:textColorHint="#888888"
-                android:layout_marginBottom="20dp"/>
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="Featured Stays"
-                android:textSize="18sp"
-                android:textStyle="bold"
-                android:layout_marginBottom="10dp"/>
+                android:layout_height="420dp">
+
+                <ImageView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:src="@drawable/unit1"
+                    android:scaleType="centerCrop" />
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:background="#4D000000" />
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="80dp"
+                    android:background="#80FFFFFF" />
+
+                <ImageView
+                    android:id="@+id/iv_header_logo"
+                    android:layout_width="160dp"
+                    android:layout_height="70dp"
+                    android:layout_gravity="top|center_horizontal"
+                    android:layout_marginTop="10dp"
+                    android:src="@drawable/luxx_logo_blacktext"
+                    android:contentDescription="Luxx Haven Logo" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="bottom"
+                    android:padding="24dp"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Your Exquisite\nEscape Awaits"
+                        android:textColor="@color/white"
+                        android:textSize="32sp"
+                        android:textStyle="bold"
+                        android:fontFamily="serif" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Discover a place where comfort meets style."
+                        android:textColor="#EEEEEE"
+                        android:textSize="14sp"
+                        android:layout_marginTop="8dp" />
+
+                    <androidx.cardview.widget.CardView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="20dp"
+                        app:cardCornerRadius="12dp"
+                        app:cardElevation="8dp"
+                        app:cardBackgroundColor="#F2FFFFFF">
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:padding="16dp"
+                            android:orientation="horizontal">
+
+                            <TextView
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1"
+                                android:text="Select Unit"
+                                android:textColor="#666666"
+                                android:drawablePadding="8dp"
+                                android:textSize="13sp" />
+
+                            <View
+                                android:layout_width="1dp"
+                                android:layout_height="20dp"
+                                android:background="#DDDDDD"
+                                android:layout_marginHorizontal="10dp" />
+
+                            <TextView
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1"
+                                android:text="Check-in Date"
+                                android:textColor="#666666"
+                                android:drawablePadding="8dp"
+                                android:textSize="13sp" />
+
+                        </LinearLayout>
+                    </androidx.cardview.widget.CardView>
+                </LinearLayout>
+            </FrameLayout>
 
             <LinearLayout
                 android:layout_width="match_parent"
-                android:layout_height="200dp"
-                android:background="#E0E0E0"
-                android:gravity="center"
+                android:layout_height="wrap_content"
+                android:padding="20dp"
                 android:orientation="vertical">
 
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="House Image Here" />
-            </LinearLayout>
+                    android:layout_marginBottom="16dp"
+                    android:text="Featured Stays"
+                    android:textColor="#4B4141"
+                    android:textSize="19sp"
+                    android:textStyle="bold"
+                    android:typeface="serif" />
 
+                <androidx.cardview.widget.CardView
+                    android:layout_width="match_parent"
+                    android:layout_height="240dp"
+                    app:cardCornerRadius="20dp"
+                    app:cardElevation="4dp"
+                    android:layout_marginBottom="12dp">
+
+                    <ImageView
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:src="@drawable/unit1"
+                        android:scaleType="centerCrop" />
+                </androidx.cardview.widget.CardView>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Pinterest - Unit 1"
+                    android:textStyle="bold"
+                    android:textSize="16sp"
+                    android:textColor="#0F0E0E"
+                    android:layout_marginBottom="24dp"/>
+
+                <androidx.cardview.widget.CardView
+                    android:layout_width="match_parent"
+                    android:layout_height="240dp"
+                    app:cardCornerRadius="20dp"
+                    app:cardElevation="4dp"
+                    android:layout_marginBottom="12dp">
+
+                    <ImageView
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:src="@drawable/mid_cen"
+                        android:scaleType="centerCrop" />
+                </androidx.cardview.widget.CardView>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Mid Century - Unit 2"
+                    android:textStyle="bold"
+                    android:textSize="16sp"
+                    android:textColor="#0F0E0E"
+                    android:layout_marginBottom="24dp"/>
+
+            </LinearLayout>
         </LinearLayout>
     </ScrollView>
-
 </RelativeLayout>
