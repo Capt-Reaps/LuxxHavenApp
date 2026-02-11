@@ -12,6 +12,12 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.MyApplication">
         <activity
+            android:name=".HelpActivity"
+            android:exported="false" />
+        <activity
+            android:name=".Helpcenter"
+            android:exported="false" />
+        <activity
             android:name=".BookingsActivity"
             android:exported="false" />
         <activity

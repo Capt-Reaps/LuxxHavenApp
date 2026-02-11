@@ -37,6 +37,12 @@ public class MainActivity extends AppCompatActivity {
                 overridePendingTransition(0, 0);
                 return true;
             }
+            else if (itemId == R.id.nav_help) {
+                startActivity(new Intent(getApplicationContext(), HelpActivity.class));
+                overridePendingTransition(0, 0);
+                return true;
+            }
+
             return false;
         });
     }
