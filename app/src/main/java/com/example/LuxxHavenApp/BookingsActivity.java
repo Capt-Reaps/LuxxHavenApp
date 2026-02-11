@@ -12,7 +12,7 @@ public class BookingsActivity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_bookings); // Make sure you create this XML file!
+        setContentView(R.layout.activity_bookings);
 
         BottomNavigationView bottomNavigationView = findViewById(R.id.bottom_navigation);
 
@@ -32,6 +32,11 @@ public class BookingsActivity extends AppCompatActivity {
                     startActivity(new Intent(getApplicationContext(), WishlistActivity.class));
                     overridePendingTransition(0, 0);
                     return true;
+
+                } else if (itemId == R.id.nav_help) {
+                        startActivity(new Intent(getApplicationContext(), HelpActivity.class));
+                        overridePendingTransition(0, 0);
+                        return true;
                 } else if (itemId == R.id.nav_bookings) {
                     return true;
                 }

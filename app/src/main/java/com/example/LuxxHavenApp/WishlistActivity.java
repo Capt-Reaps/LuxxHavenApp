@@ -19,7 +19,7 @@ public class WishlistActivity extends AppCompatActivity {
 
         bottomNavigationView.setSelectedItemId(R.id.nav_wishlist);
 
-        // Perform item selected listener
+
         bottomNavigationView.setOnItemSelectedListener(new BottomNavigationView.OnItemSelectedListener() {
             @Override
             public boolean onNavigationItemSelected(@NonNull MenuItem item) {
@@ -33,6 +33,12 @@ public class WishlistActivity extends AppCompatActivity {
                     return true; // Already here
                 } else if (itemId == R.id.nav_bookings) {
                     startActivity(new Intent(getApplicationContext(), BookingsActivity.class));
+                    overridePendingTransition(0, 0);
+                    return true;
+                }
+
+                else if (itemId == R.id.nav_help) {
+                    startActivity(new Intent(getApplicationContext(), HelpActivity.class));
                     overridePendingTransition(0, 0);
                     return true;
                 }
