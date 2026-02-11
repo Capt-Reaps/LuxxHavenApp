@@ -33,7 +33,7 @@ public class BookingsActivity extends AppCompatActivity {
                     overridePendingTransition(0, 0);
                     return true;
 
-                } else if (itemId == R.id.nav_help) {
+                } else if (itemId == R.id.nav_bookings) {
                         startActivity(new Intent(getApplicationContext(), HelpActivity.class));
                         overridePendingTransition(0, 0);
                         return true;

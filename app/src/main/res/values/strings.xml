@@ -1,5 +1,14 @@
 <resources>
     <string name="app_name">Luxx Haven</string>
     <!-- TODO: Remove or change this placeholder text -->
+    <string name="open">Open</string>
+    <string name="close">Close</string>
+    <item name="drawerLayout" type="id" />
     <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="todo">TODO</string>
+    <string name="todo1">TODO</string>
+
+    <!-- <string name="app_name">LuxxHaven</string> -->
+
+    <!-- <string name="app_name">My Application</string> -->
 </resources>

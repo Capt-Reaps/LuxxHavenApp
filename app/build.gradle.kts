@@ -9,7 +9,7 @@ android {
     }
 
     defaultConfig {
-        applicationId = "com.example.myapplication"
+        applicationId = "com.example.LuxxHavenApp"
         minSdk = 24
         targetSdk = 36
         versionCode = 1

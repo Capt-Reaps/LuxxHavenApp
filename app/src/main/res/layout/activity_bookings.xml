@@ -15,22 +15,213 @@
         app:labelVisibilityMode="labeled"
         app:menu="@menu/bottom_nav_menu" />
 
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@id/bottom_navigation"
+        android:fillViewport="true">
 
-  <LinearLayout
-      android:layout_height="wrap_content"
-     android:layout_width="wrap_content"
-      >
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <FrameLayout
+                android:layout_width="match_parent"
+                android:layout_height="900dp">
+
+                <ImageView
+                    android:layout_width="390dp"
+                    android:layout_height="300dp"
+                    android:src="@drawable/mid"
+                    android:layout_marginBottom="300dp"
+                    android:layout_gravity="center"
+                    android:scaleType="centerCrop" />
+
+                <ImageView
+                    android:layout_width="390dp"
+                    android:layout_height="300dp"
+                    android:layout_marginTop="20dp"
+                    android:layout_gravity="center"
+                    android:scaleType="centerCrop"
+                    android:src="@drawable/mid1" />
+
+                <ImageView
+                    android:layout_width="390dp"
+                    android:layout_height="300dp"
+                    android:layout_marginTop="340dp"
+                    android:layout_gravity="center"
+                    android:scaleType="centerCrop"
+                    android:src="@drawable/mid3" />
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="80dp"
+                    android:background="#F5F5DC" />
+
+                <ImageView
+                    android:id="@+id/iv_header_logo"
+                    android:layout_width="160dp"
+                    android:layout_height="70dp"
+                    android:layout_gravity="top|center_horizontal"
+                    android:layout_marginTop="10dp"
+                    android:src="@drawable/luxx_logo_blacktext"
+                    android:contentDescription="Luxx Haven Logo" />
+            </FrameLayout>
 
 
-  </LinearLayout>
 
-    <ImageView
-        android:layout_width="wrap_content"
-        android:layout_height="113dp"
-        android:src="@drawable/logo"
+            <FrameLayout
+                android:layout_width="match_parent"
+                android:layout_height="500dp">
 
-        />
+                <ImageView
+                    android:layout_width="match_parent"
+                    android:layout_height="450dp"
+                    android:src="@drawable/card"
+                    android:layout_margin="20dp" />
 
+                <FrameLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:padding="40dp">
 
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="₱2,499 / night"
+                        android:textSize="30sp"
+                        android:textColor="@color/black" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Check-In"
+                        android:layout_marginTop="60dp"
+                        android:textSize="20sp"
+                        android:textColor="@color/black" />
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        android:layout_marginTop="100dp">
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="40dp"
+                            android:background="@drawable/card"
+                            android:text="Select Date"
+                            android:gravity="center_vertical"
+                            android:paddingLeft="15dp"
+                            android:textSize="15sp"
+                            android:alpha="0.4"
+                            android:textColor="@color/black"/>
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Check-Out"
+                            android:layout_marginTop="10dp"
+                            android:textSize="20sp"
+                            android:textColor="@color/black" />
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="40dp"
+                            android:background="@drawable/card"
+                            android:text="Select Date"
+                            android:gravity="center_vertical"
+                            android:paddingLeft="15dp"
+                            android:alpha="0.4"
+                            android:textSize="15sp"
+                            android:textColor="@color/black"/>
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Guest"
+                            android:layout_marginTop="10dp"
+                            android:textSize="20sp"
+                            android:textColor="@color/black" />
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="40dp"
+                            android:background="@drawable/card"
+                            android:text="2"
+                            android:textSize="15sp"
+                            android:gravity="center_vertical"
+                            android:paddingLeft="15dp"
+                            android:alpha="0.4"
+                            android:textColor="@color/black"/>
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="50dp"
+                            android:layout_marginTop="20dp"
+                            android:background="@drawable/card"
+                            android:text="Book Now"
+                            android:gravity="center"
+                            android:textSize="20sp"
+                            android:textStyle="bold"
+                            android:textColor="@color/black" />
+                    </LinearLayout>
+
+                </FrameLayout>
+
+            </FrameLayout>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/bg_box"
+                android:orientation="vertical"
+                android:padding="20dp">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="MID CENTURY UNIT"
+                    android:textSize="30sp"
+                    android:textStyle="bold"
+                    android:textColor="@color/black" />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Victoria Sports Tower A, Edsa"
+                    android:textSize="20sp"
+                    android:textColor="@color/black" />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="About This Unit"
+                    android:layout_marginTop="40dp"
+                    android:textSize="25sp"
+                    android:textStyle="bold"
+                    android:textColor="@color/black" />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Welcome to our Mid-Century Unit ✨ A retro-inspired staycation with a modern twist, right in the heart of Quezon City. Enjoy free pool &amp; gym access, a PS4 for fun game nights, and board games to keep the vibe going. Plus, a complete kitchen set-up is ready for your cooking needs. With bold colors, playful details, and comfy furnishings, this unit is ideal for couples, barkada hangouts, or solo guests looking for a stylish and Instagrammable city getaway."
+                    android:textSize="15sp"
+                    android:justificationMode="inter_word"
+                    android:textColor="@color/black" />
+            </LinearLayout>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Things To Know"
+                android:textSize="20sp"
+                android:textStyle="bold"
+                android:textColor="@color/black"
+                android:layout_marginTop="30dp"
+                android:layout_marginLeft="20dp"
+                android:paddingBottom="50dp"/>
+
+        </LinearLayout>
+    </ScrollView>
 </RelativeLayout>
-
