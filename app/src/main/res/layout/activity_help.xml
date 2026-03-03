@@ -47,138 +47,339 @@
             </LinearLayout>
 
             <TextView
+                android:id="@+id/tv_main_title"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_gravity="center_horizontal"
-                android:layout_marginTop="0dp"
                 android:gravity="center"
-                android:text="We're Here\nto Help"
+                android:text="Help Center"
                 android:textColor="@color/white"
                 android:textSize="36sp"
                 android:textStyle="bold"
                 android:fontFamily="serif" />
 
             <TextView
+                android:id="@+id/tv_subtitle"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_gravity="center_horizontal"
                 android:layout_marginTop="8dp"
                 android:layout_marginBottom="30dp"
                 android:gravity="center"
-                android:text="Manage your bookings and get support."
+                android:text="How can we assist you today?"
                 android:textColor="#EEEEEE"
                 android:textSize="14sp" />
 
-            <androidx.cardview.widget.CardView
+            <LinearLayout
+                android:id="@+id/ll_menu_options"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginHorizontal="24dp"
-                app:cardBackgroundColor="@color/white"
-                app:cardCornerRadius="16dp"
-                app:cardElevation="10dp">
+                android:orientation="vertical"
+                android:visibility="visible"
+                android:paddingHorizontal="24dp">
 
-                <LinearLayout
+                <androidx.cardview.widget.CardView
+                    android:id="@+id/card_opt_reschedule"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:orientation="vertical">
-
-                    <TextView
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:background="@color/luxx_banner_beige"
-                        android:gravity="center"
-                        android:padding="16dp"
-                        android:text="BOOKING RESCHEDULE"
-                        android:textColor="@color/luxx_text_dark"
-                        android:textSize="14sp"
-                        android:letterSpacing="0.1"
-                        android:textStyle="bold" />
+                    android:layout_marginBottom="20dp"
+                    app:cardBackgroundColor="@color/white"
+                    app:cardCornerRadius="16dp"
+                    app:cardElevation="8dp"
+                    android:clickable="true"
+                    android:focusable="true"
+                    android:foreground="?attr/selectableItemBackground">
 
                     <LinearLayout
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:orientation="vertical"
-                        android:padding="24dp">
+                        android:orientation="horizontal"
+                        android:padding="20dp"
+                        android:gravity="center_vertical">
 
-                        <TextView
-                            android:layout_width="wrap_content"
+                        <ImageView
+                            android:layout_width="40dp"
+                            android:layout_height="40dp"
+                            android:src="@drawable/calendar"
+                            app:tint="#6D5D4B" />
+
+                        <LinearLayout
+                            android:layout_width="0dp"
                             android:layout_height="wrap_content"
-                            android:text="Find Your Booking"
-                            android:textColor="@color/luxx_text_dark"
-                            android:textSize="20sp"
-                            android:textStyle="bold"
-                            android:layout_marginBottom="20dp" />
+                            android:layout_weight="1"
+                            android:orientation="vertical"
+                            android:layout_marginStart="16dp">
 
-                        <TextView
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:text="Booking ID *"
-                            android:textColor="#555555"
-                            android:textSize="12sp"
-                            android:layout_marginBottom="4dp"/>
-
-                        <com.google.android.material.textfield.TextInputLayout
-                            android:layout_width="match_parent"
-                            android:layout_height="wrap_content"
-                            app:boxBackgroundMode="outline"
-                            app:boxCornerRadiusTopStart="6dp"
-                            app:boxCornerRadiusTopEnd="6dp"
-                            app:boxCornerRadiusBottomStart="6dp"
-                            app:boxCornerRadiusBottomEnd="6dp"
-                            app:hintEnabled="false"
-                            android:layout_marginBottom="16dp">
-
-                            <com.google.android.material.textfield.TextInputEditText
-                                android:id="@+id/et_booking_id"
-                                android:layout_width="match_parent"
+                            <TextView
+                                android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
-                                android:hint="e.g., LUX-000001"
-                                android:textSize="14sp"
-                                android:inputType="textCapCharacters" />
-                        </com.google.android.material.textfield.TextInputLayout>
+                                android:text="Reschedule Booking"
+                                android:textSize="18sp"
+                                android:textStyle="bold"
+                                android:textColor="#333333"/>
 
-                        <TextView
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:text="Email Address *"
-                            android:textColor="#555555"
-                            android:textSize="12sp"
-                            android:layout_marginBottom="4dp"/>
-
-                        <com.google.android.material.textfield.TextInputLayout
-                            android:layout_width="match_parent"
-                            android:layout_height="wrap_content"
-                            app:boxBackgroundMode="outline"
-                            app:boxCornerRadiusTopStart="6dp"
-                            app:boxCornerRadiusTopEnd="6dp"
-                            app:boxCornerRadiusBottomStart="6dp"
-                            app:boxCornerRadiusBottomEnd="6dp"
-                            app:hintEnabled="false"
-                            android:layout_marginBottom="24dp">
-
-                            <com.google.android.material.textfield.TextInputEditText
-                                android:id="@+id/et_email"
-                                android:layout_width="match_parent"
+                            <TextView
+                                android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
-                                android:hint="The email you used to book"
-                                android:textSize="14sp"
-                                android:inputType="textEmailAddress" />
-                        </com.google.android.material.textfield.TextInputLayout>
+                                android:text="Change dates for an upcoming stay"
+                                android:textSize="12sp"
+                                android:textColor="#666666"/>
+                        </LinearLayout>
 
-                        <Button
-                            android:id="@+id/btn_find_booking"
-                            android:layout_width="match_parent"
-                            android:layout_height="55dp"
-                            android:text="Find Booking"
-                            android:textAllCaps="false"
-                            android:textSize="16sp"
-                            android:textColor="@color/white"
-                            android:backgroundTint="@color/luxx_button_gray"
-                            app:cornerRadius="8dp" />
-
+                        <ImageView
+                            android:layout_width="24dp"
+                            android:layout_height="24dp"
+                            android:src="@drawable/ic_arrow_back"
+                            android:rotation="180"
+                            app:tint="#CCCCCC"/>
                     </LinearLayout>
-                </LinearLayout>
-            </androidx.cardview.widget.CardView>
+                </androidx.cardview.widget.CardView>
+
+                <androidx.cardview.widget.CardView
+                    android:id="@+id/card_opt_faq"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    app:cardBackgroundColor="@color/white"
+                    app:cardCornerRadius="16dp"
+                    app:cardElevation="8dp"
+                    android:clickable="true"
+                    android:focusable="true"
+                    android:foreground="?attr/selectableItemBackground">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:padding="20dp"
+                        android:gravity="center_vertical">
+
+                        <ImageView
+                            android:layout_width="40dp"
+                            android:layout_height="40dp"
+                            android:src="@drawable/help"
+                            app:tint="#6D5D4B" />
+
+                        <LinearLayout
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:orientation="vertical"
+                            android:layout_marginStart="16dp">
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="FAQs"
+                                android:textSize="18sp"
+                                android:textStyle="bold"
+                                android:textColor="#333333"/>
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="Common questions and answers"
+                                android:textSize="12sp"
+                                android:textColor="#666666"/>
+                        </LinearLayout>
+
+                        <ImageView
+                            android:layout_width="24dp"
+                            android:layout_height="24dp"
+                            android:src="@drawable/ic_arrow_back"
+                            android:rotation="180"
+                            app:tint="#CCCCCC"/>
+                    </LinearLayout>
+                </androidx.cardview.widget.CardView>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/ll_reschedule_form"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:visibility="gone">
+
+                <TextView
+                    android:id="@+id/btn_back_to_menu_resched"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="← Back to Menu"
+                    android:textColor="#E0E0E0"
+                    android:textSize="14sp"
+                    android:padding="16dp"
+                    android:layout_marginStart="8dp"/>
+
+                <androidx.cardview.widget.CardView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginHorizontal="24dp"
+                    app:cardBackgroundColor="@color/white"
+                    app:cardCornerRadius="16dp"
+                    app:cardElevation="10dp">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:background="@color/luxx_banner_beige"
+                            android:gravity="center"
+                            android:padding="16dp"
+                            android:text="BOOKING RESCHEDULE"
+                            android:textColor="@color/luxx_text_dark"
+                            android:textSize="14sp"
+                            android:letterSpacing="0.1"
+                            android:textStyle="bold" />
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="vertical"
+                            android:padding="24dp">
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="Find Your Booking"
+                                android:textColor="@color/luxx_text_dark"
+                                android:textSize="20sp"
+                                android:textStyle="bold"
+                                android:layout_marginBottom="20dp" />
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="Booking ID *"
+                                android:textColor="#555555"
+                                android:textSize="12sp"
+                                android:layout_marginBottom="4dp"/>
+
+                            <com.google.android.material.textfield.TextInputLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                app:boxBackgroundMode="outline"
+                                app:hintEnabled="false"
+                                android:layout_marginBottom="16dp">
+
+                                <com.google.android.material.textfield.TextInputEditText
+                                    android:id="@+id/et_booking_id"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:hint="e.g., LUX-000001"
+                                    android:textSize="14sp"
+                                    android:inputType="textCapCharacters" />
+                            </com.google.android.material.textfield.TextInputLayout>
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="Email Address *"
+                                android:textColor="#555555"
+                                android:textSize="12sp"
+                                android:layout_marginBottom="4dp"/>
+
+                            <com.google.android.material.textfield.TextInputLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                app:boxBackgroundMode="outline"
+                                app:hintEnabled="false"
+                                android:layout_marginBottom="24dp">
+
+                                <com.google.android.material.textfield.TextInputEditText
+                                    android:id="@+id/et_email"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:hint="The email you used to book"
+                                    android:textSize="14sp"
+                                    android:inputType="textEmailAddress" />
+                            </com.google.android.material.textfield.TextInputLayout>
+
+                            <Button
+                                android:id="@+id/btn_find_booking"
+                                android:layout_width="match_parent"
+                                android:layout_height="55dp"
+                                android:text="Find Booking"
+                                android:textAllCaps="false"
+                                android:textSize="16sp"
+                                android:textColor="@color/white"
+                                android:backgroundTint="@color/luxx_button_gray"
+                                app:cornerRadius="8dp" />
+
+                        </LinearLayout>
+                    </LinearLayout>
+                </androidx.cardview.widget.CardView>
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/ll_faq_content"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:visibility="gone">
+
+                <TextView
+                    android:id="@+id/btn_back_to_menu_faq"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="← Back to Menu"
+                    android:textColor="#E0E0E0"
+                    android:textSize="14sp"
+                    android:padding="16dp"
+                    android:layout_marginStart="8dp"/>
+
+                <androidx.cardview.widget.CardView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginHorizontal="24dp"
+                    app:cardBackgroundColor="@color/white"
+                    app:cardCornerRadius="16dp"
+                    app:cardElevation="10dp">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:background="@color/luxx_banner_beige"
+                            android:gravity="center"
+                            android:padding="16dp"
+                            android:text="FREQUENTLY ASKED QUESTIONS"
+                            android:textColor="@color/luxx_text_dark"
+                            android:textSize="14sp"
+                            android:letterSpacing="0.1"
+                            android:textStyle="bold" />
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="vertical"
+                            android:padding="24dp">
+
+                            <ProgressBar
+                                android:id="@+id/pb_faq_loading"
+                                android:layout_width="30dp"
+                                android:layout_height="30dp"
+                                android:layout_gravity="center"
+                                android:visibility="gone"/>
+
+                            <LinearLayout
+                                android:id="@+id/ll_faq_list"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:orientation="vertical" />
+
+                        </LinearLayout>
+                    </LinearLayout>
+                </androidx.cardview.widget.CardView>
+            </LinearLayout>
+
         </LinearLayout>
     </ScrollView>
 
